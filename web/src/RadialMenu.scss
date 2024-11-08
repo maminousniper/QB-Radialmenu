@@ -1,0 +1,101 @@
+@import url('https://api.vormir.life/files/fonts/fonts.css');
+
+body {
+    margin: 0;
+    font-family: "Gilroy", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh !important;
+    background-color: rgba(128, 128, 128, 0) !important;
+    // background-color: transparent !important;  // Please unComment this to use in Production
+    overflow: hidden !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0vh;
+    height: 0vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.containerRadial {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .radialmenucon {
+        width: 16.667vw;
+        height: 29.63vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .radialDot {
+            /* Ellipse 1 */
+            cursor: pointer;
+            position: absolute;
+            width: 3.125vw;
+            height: 3.125vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(315deg, #92FFA2 0%, #92FFA2 100%);
+            border-radius: 50vw;
+        }
+    }
+}
+
+.radialButton {
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .radialButtonIcon {
+        margin-left: 5vw;
+        margin-bottom: 11.5vw;
+        cursor: pointer;
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.my-node-enter {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.my-node-enter-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: opacity 200ms, transform 200ms;
+}
+
+.my-node-exit {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.my-node-exit-active {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 200ms, transform 200ms;
+}
+
+.slowDownAnimation {
+    --fa-animation-duration: 1.5s;
+}
